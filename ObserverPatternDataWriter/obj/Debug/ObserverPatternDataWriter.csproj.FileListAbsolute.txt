@@ -1,0 +1,5 @@
+C:\Users\320012619\Documents\Visual Studio 2015\Projects\C#\ObserverPatternDataWriter\ObserverPatternDataWriter\bin\Debug\ObserverPatternDataWriter.dll
+C:\Users\320012619\Documents\Visual Studio 2015\Projects\C#\ObserverPatternDataWriter\ObserverPatternDataWriter\bin\Debug\ObserverPatternDataWriter.pdb
+C:\Users\320012619\Documents\Visual Studio 2015\Projects\C#\ObserverPatternDataWriter\ObserverPatternDataWriter\obj\Debug\ObserverPatternDataWriter.csprojResolveAssemblyReference.cache
+C:\Users\320012619\Documents\Visual Studio 2015\Projects\C#\ObserverPatternDataWriter\ObserverPatternDataWriter\obj\Debug\ObserverPatternDataWriter.dll
+C:\Users\320012619\Documents\Visual Studio 2015\Projects\C#\ObserverPatternDataWriter\ObserverPatternDataWriter\obj\Debug\ObserverPatternDataWriter.pdb
