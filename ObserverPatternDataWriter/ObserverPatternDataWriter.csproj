@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Enums\FlowLineType.cs" />
     <Compile Include="Enums\LineType.cs" />
+    <Compile Include="Enums\ReportStatus.cs" />
     <Compile Include="Enums\TestItemType.cs" />
     <Compile Include="ITafReportManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,7 +51,9 @@
     <Compile Include="ScriptOutputHandling\TafScriptNormalLine.cs" />
     <Compile Include="TafReportHandler.cs" />
     <Compile Include="ITafReport.cs" />
-    <Compile Include="TafTextReport.cs" />
+    <Compile Include="TafReportLine.cs" />
+    <Compile Include="Reporters\TafReportPlainTextWriter.cs" />
+    <Compile Include="TafXmlReport.cs" />
     <Compile Include="Unsubscriber.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
