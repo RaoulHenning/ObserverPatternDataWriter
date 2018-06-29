@@ -4,33 +4,33 @@ using ObserverPatternDataWriter.ScriptOutputHandling;
 
 namespace ObserverPatternDataWriter
 {
-    public class TafReportHandler : IObservable<TafScriptLineBase>
+    public class TafReportHandler : IObservable<TafReportLine>
     {
-        private List<IObserver<TafScriptLineBase>> _observers;
-        private List<TafScriptLineBase> _scriptOutputLines;
+        private List<IObserver<TafReportLine>> _observers;
+        private List<TafReportLine> _scriptOutputLines;
 
         public TafReportHandler()
         {
-            _observers = new List<IObserver<TafScriptLineBase>>();
-            _scriptOutputLines = new List<TafScriptLineBase>();
+            _observers = new List<IObserver<TafReportLine>>();
+            _scriptOutputLines = new List<TafReportLine>();
         }
 
-        public IDisposable Subscribe(IObserver<TafScriptLineBase> observer)
+        public IDisposable Subscribe(IObserver<TafReportLine> observer)
         {
             if (!_observers.Contains(observer))
             {
                 _observers.Add(observer);             
             }
-            return new Unsubscriber<TafScriptLineBase>(_observers, observer);
+            return new Unsubscriber<TafReportLine>(_observers, observer);
         }
 
-        public void HandleOutputLine(TafScriptLineBase tafScriptOutputLine)
+        public void HandleOutputLine(TafReportLine tafReportLine)
         {
-            _scriptOutputLines.Add(tafScriptOutputLine);
+            _scriptOutputLines.Add(tafReportLine);
 
             foreach (var observer in _observers)
             {
-                observer.OnNext(tafScriptOutputLine);
+                observer.OnNext(tafReportLine);
             }
         }
 
@@ -44,7 +44,7 @@ namespace ObserverPatternDataWriter
             _observers = null;
             _scriptOutputLines = null;
         }
-        public IReadOnlyList<TafScriptLineBase> GetScriptOutputLines()
+        public IReadOnlyList<string> GetScriptOutputLines()
         {
             return _scriptOutputLines;
         }
